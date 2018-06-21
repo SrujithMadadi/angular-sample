@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+
+
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<table  class="a">
+        <thead>
+            
+            <th>Date</th>
+            <th>Venodr Name</th>
+            <th>Vendor Contact</th>
+            <th>Vendor Phone</th>
+            <th>Client</th>
+            <th>Status</th>
+        </thead>
+              
+       <tr *ngFor="let i of gridValue">
+          
+      <td> {{i.Date}}</td>
+     <td>  {{i.vendorName}}</td>
+     <td>{{i.vendorContactPerson}}</td>
+     <td>{{i.contactNumber}}</td>
+     <td>{{i.client}}</td>
+     <td>{{i.status}}</td>
+    
+          </tr>
+       
+     
+      </table>
+
+<div class="container">
+  <ul class="nav nav-tabs nav-pills">
+    <li class="active"><a a data-toggle="tab" href="./app"><h4>Submit a call</h4></a></li>
+    <li><a><h4>Search a call</h4></a></li>
+  </ul>
+  <div class="container">
+    <div class="col-lg-12 well">
+      <div class="row">
+        <form [formGroup]="formVar" (ngSubmit)="onSubmit()">
+
+          <div class="col-sm-12">
+            <div class="row">
+
+              <div class="col-sm-6 form-group">
+                <label>Date</label>
+                <input type="date" placeholder="OPT Start Date" class="form-control" formControlName="Date">
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Vendor Organization Name</label>
+                <input type="text" placeholder="" class="form-control" formControlName="VendorOName">
+              </div>
+              <div class="col-sm-12 form-group">
+                <label>Vendor Contact Person</label>
+                <input type="text" placeholder="" class="form-control" formControlName="VendorcontactPerson">
+              </div>
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-2 form-group">
+                    <label>Contact Number</label>
+                    <input type="text" placeholder="" class="form-control" formControlName="Ex">
+                  </div>
+
+                  <div class="col-sm-6 form-group">
+                    <label></label>
+                    <input type="text" placeholder="" class="form-control" formControlName="ContactNumber">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Contact Email ID</label>
+                <input type="text" placeholder="" class="form-control" formControlName="ContactEmailId">
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Status</label>
+                <input type="text" placeholder="" class="form-control" formControlName="Status">
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Implementation Patner</label>
+                <input type="text" placeholder="" class="form-control" formControlName="Imppatner">
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Client</label>
+                <input type="text" placeholder="" class="form-control" formControlName="Client">
+              </div>
+
+              <div class="col-sm-12 form-group">
+                <label>Comment</label>
+                <input type="text" placeholder="" class="form-control" formControlName="Comment">
+              </div>
+
+
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+      
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="homefooter">
+    <app-home-footer></app-home-footer>
+  </div>
